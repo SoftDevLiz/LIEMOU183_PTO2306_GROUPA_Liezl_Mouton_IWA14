@@ -16,28 +16,28 @@ const logSentence = () => {
 const logSentenceTwice = () => {
   logSentence();
   logSentence();
-}; // Simply calls logSentence twice. Why does something like logSentence() * 2 not work?
+}; // Simply calls logSentence twice. Why does something like logSentence() * 2 not work? Answer: Times result by two but there are no numerical values
 
-logSentenceTwice(); // Calls logTwice()
+logSentenceTwice(); // Calls logSentenceTwice()
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-// MORE ADVANCED ANSWER USING PARAMETERS
+// ANSWER USING PARAMETERS
 
 // Initialized the variables as const
-const firstName = "John";
-const age = 35;
-const hobby = "Coding";
+// const firstName = "John";
+// const age = 35;
+// const hobby = "Coding";
 
-// Fixed console.log syntax and gave the function a parameter
-const logTwice = (thisIsAParameter) => {
-  console.log(thisIsAParameter);
-  console.log(thisIsAParameter);
-};
+// // Fixed console.log syntax and gave the function a parameter (Basically a placeholder for the value it will receive)
+// const logTwice = (thisIsAParameter) => {
+//   console.log(thisIsAParameter);
+//   console.log(thisIsAParameter);
+// };
 
-// Left this as a traditional function but changed the name so that the hoisting wouldn't cause a bug
-function logHobby() {
-  logTwice(`Hello, ${firstName} (${age}). I love ${hobby}!`); // Changed name to firstName
-}
+// // Left this as a traditional function but changed the name so that the hoisting wouldn't cause a bug + Changed name to firstName
+// function logHobby() {
+//   logTwice(`Hello, ${firstName} (${age}). I love ${hobby}!`); // Pass the sentence to the logTwice parameter
+// }
 
-logHobby(); // Logs the desired result
+// logHobby(); // Calls logHobby and logs the desired result

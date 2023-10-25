@@ -5,9 +5,9 @@
 	2. Added parentheses to the parameters
 	3. Removed curly brackets - You need to remove the brackets if you do not specifically use the return keyword and we are able to do this because arrow functions support implicit returns
 */
-add = (a, b) => a + b;
+const add = (a, b) => a + b;
 
-multiply = (a, b) => a * b; // Changed to * (multiply)
+const multiply = (a, b) => a * b; // Changed to * (multiply)
 
 /*	Traditional function:
 	1. Changed this.add to just add
@@ -20,7 +20,7 @@ multiply = (a, b) => a * b; // Changed to * (multiply)
 function internal() {
   const added = add(this.internal.a, this.internal.b); // Need to use the this method because otherwise you cannot have one function that looks inside of example1 and example2
   const addedMultiplied = multiply(added, this.internal.c);
-  return console.log(addedMultiplied); // Why can you not just say return addedMultiplied? Where do things appear when they get returned?
+  console.log(addedMultiplied); // Why can you not just say return addedMultiplied? Where do things appear when they get returned?
 }
 
 // Not allowed to change below this
